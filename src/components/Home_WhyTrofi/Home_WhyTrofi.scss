@@ -1,0 +1,130 @@
+@import '../../mixin.scss';
+
+.home_whytrofy_boxwrap {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    background-image: url('../../assets/images/home_whytrofi_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 70px;
+    @include respond-to (media-sm) {
+        border-radius: 30px;
+    }
+    .home_whytrofy_box {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 80px 0px;
+        @include respond-to (media-sm) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 25px 0px;
+        }
+        .treasurylogo_box {
+            // max-width: 450px;
+            margin: 0px auto 20px;
+            @include respond-to (media-xl) {
+                // max-width: 400px;
+            }
+            @include respond-to (media-md) {
+                max-width: 300px;
+            }
+            @include respond-to (media-xs) {
+                max-width: 250px;
+            }
+            img {
+                width: auto;
+                max-width: 100%;
+            }
+        }        
+    }
+    .home_whytrofy_left {
+        font-size: 27px;
+        color: #ffffff;
+        font-family: 'tt_normsmedium';
+        text-align: center;
+        position: relative;
+        @include respond-to (media-xl) {
+            font-size: 18px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            background: #103cad;
+            width:100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            opacity: 0.9;
+            border-radius: 70px 0px 0px 70px;
+            @include respond-to (media-sm) {
+                border-radius: 30px 30px 0px 0px;
+            }
+        }
+        .home_whytrofy_boxinner {
+            position: relative;
+            z-index: 1;
+            padding: 10px;
+        }
+        .amber_tl_text {
+            font-size: 29px;
+            margin-top: 10px;
+            @include respond-to (media-xl) {
+                font-size: 18px;
+            }
+            @include respond-to (media-md) {
+                font-size: 16px;
+            }
+            @include respond-to (media-xs) {
+                font-size: 14px;
+            }
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+    .home_whytrofy_right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .home_whytrofy_cont {
+            font-size: 29px;
+            color: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            font-family: 'tt_normsmedium';
+            padding: 10px;
+            @include respond-to (media-xl) {
+                max-width: 400px;
+                font-size: 18px;
+            }
+            @include respond-to (media-md) {
+                font-size: 16px;
+                padding: 0px 25px;
+            }
+            h2 {
+                font-size: 69px;
+                font-family: 'tt_normsbold';
+                text-transform: uppercase;
+                @include respond-to (media-xl) {
+                    font-size: 38px;
+                }
+                @include respond-to (media-sm) {
+                    font-size: 30px;
+                }
+            }
+            .home_whytrofy_title {
+                font-size: 41px;
+                @include respond-to (media-xl) {
+                    font-size: 24px;
+                }
+                @include respond-to (media-xs) {
+                    font-size: 18px;
+                }
+            }
+
+        }
+    }
+    
+}

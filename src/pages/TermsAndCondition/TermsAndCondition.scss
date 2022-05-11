@@ -1,0 +1,92 @@
+@import '../../mixin.scss';
+
+.white_bg {
+    background: #ffffff !important;
+}
+.content_pageWrapper {
+    padding-left: 130px;
+    padding-right: 130px;
+    @include respond-to (media-lg) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    @include respond-to (media-lg) {
+        padding: 30px 20px 0px;
+    }
+    .pageHD_wrapper {
+        .pageHD {
+            font-size: 40px;
+            color: #000000;
+            font-family: 'tt_normsbold';
+            @include respond-to (media-xl) {
+                font-size: 30px;
+            }
+            @include respond-to (media-xl) {
+                font-size: 24px;
+            }
+            @include respond-to (media-xs) {
+                font-size: 21px;
+            }
+        }
+    }
+    .termsCondition_inner {
+        font-size: 22px;
+        color: #585858;
+        line-height: 32px;
+        @include respond-to (media-xl) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+        @include respond-to (media-xs) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+        h2 {
+            font-size: 30px;
+            color: #000000;
+            font-family: 'tt_normsbold';
+            margin: 0px;
+            padding: 30px 0px;
+            @include respond-to (media-xl) {
+                padding: 20px 0px;
+                font-size: 21px;
+            }
+            @include respond-to (media-xs) {
+                font-size: 18px;
+                line-height: 28px;
+                padding: 20px 0px 10px;
+            }
+        }
+        ol {
+            padding-left: 20px;
+            margin: 0px;
+            li {
+                list-style-type: decimal;
+                &::marker {
+                    font-size: 30px;
+                    color: #000000;
+                    font-family: 'tt_normsbold';
+                    @include respond-to (media-xl) {
+                        font-size: 21px;
+                    }
+                    @include respond-to (media-xs) {
+                        font-size: 18px;
+                    }
+                }
+                p {
+                    margin-bottom: 2rem;
+                    @include respond-to (media-sm) {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+        ul {
+            padding-left: 20px;
+            margin: 0px;
+            li {
+                list-style-type: disc;
+            }
+        }
+    }
+}

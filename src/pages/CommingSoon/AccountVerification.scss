@@ -1,0 +1,184 @@
+@import '../../mixin.scss';
+
+.pr_infoWrappers {
+    padding: 30px;
+    background: #ffffff;
+}
+.kyc_topBanner_HD {
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'tt_normsmedium';
+    @include respond-to (media-sm) {
+        font-size: 18px;
+    }
+    .white_checkIcon_box {
+        width: 70px;
+        height: 70px;
+        margin: 0px auto 15px;
+        background: #ffffff;
+        border-radius: 50%;
+        position: relative;
+        @include respond-to (media-sm) {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            @include respond-to (media-sm) {
+                max-width: 25px;
+            }
+        }
+    }    
+}
+.white_doteWrap {
+    padding: 20px 10px 0px;
+}
+.accountVerific_whiteBox {
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 4px;
+    @include respond-to (media-xl) {
+        padding: 30px;
+    }
+    @include respond-to (media-sm) {
+        padding: 15px;
+    }
+}
+.account_kyc_secHD {
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 50px;
+    font-family: 'tt_normsmedium';
+    @include respond-to (media-md) {
+        font-size: 21px;
+        margin-bottom: 30px;
+    }
+}
+.continueBtn_wrap {
+    padding: 35px 0px;
+    @include respond-to (media-sm) {
+        padding: 25px 0px 0px;
+    }
+    .continue_btn {
+        font-size: 30px;
+        line-height: 30px;
+        color: #ffffff;        
+        padding: 14px 55px;
+        text-align: center;
+        background: #0a339d;
+        font-family: 'tt_normsbold';
+        border: 1px solid #0a339d;
+        border-radius: 4px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: all .5s;
+        &:hover, &:focus {
+            box-shadow: none;
+            outline: none; 
+            background: transparent;
+            border-color: #1d2128;
+            &:after, &::before {
+                transform: scale(1);
+                border-radius: 0;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            background: #1d2128;
+            z-index: -1;
+            transform: translate3D(0,-100%,0);
+            transition: all .5s;
+            transform-origin: center center;
+            transform: scale(1,0);
+        }    
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            background: #1d2128;
+            z-index: -2;
+            transform: translate3D(0,-100%,0);
+            transition: all .5s;
+            transform-origin: center center;
+            transform: scale(1,0);
+        }
+        @include respond-to (media-xl) {
+            font-size: 21px;
+            line-height: 21px;
+            padding: 14px 20px;
+        }
+        @include respond-to (media-md) {
+            font-size: 18px;
+            line-height: 18px;
+            padding: 10px 20px;
+        }
+    }    
+}
+.select_icon {
+    background-image: url('../../assets/images/downField_icon.png');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    @include respond-to (media-sm) {
+        background-size: 15px;
+    }
+}
+
+.Commingsoon_wrapper {
+    min-height: calc(100vh - 72px);
+    @include respond-to (media-sm) {
+        min-height: calc(100vh - 62px);
+    }
+}
+.CommingSoon_box {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: #ffffff;
+    text-align: center;
+    .pageHD_BoxWrap {
+        .pageHD {
+            color: #ffffff;
+            display: block;
+            text-align: center;
+            font-size:69px;
+        }
+    }
+    .commingsoon_homebtn  {
+    width: 100%;
+    max-width: 250px;
+    margin: 25px auto 0px;
+    a {        
+    font-size: 20px;
+    color: #fff;
+    font-family: "tt_normsbold";
+    background-color: #0a339d;
+    margin-left: 45px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.5s;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    }
+}
+}

@@ -1,0 +1,160 @@
+@import '../../mixin.scss';
+
+.referFriend_wrapper {
+    padding: 30px;
+    border-radius: 4px;
+    background: #ffffff;
+    @include respond-to (media-xs) {
+        padding: 15px;
+    }
+    .rf_topBanner {
+        background: #efefef;
+        padding: 60px 115px;
+        @include respond-to (media-xl) {
+            padding: 40px 75px;
+        }
+        @include respond-to (media-md) {
+            padding: 30px 35px;
+        }
+        @include respond-to (media-xs) {
+            padding: 15px;
+        }
+        .rf_leftBox {   
+            align-self: center;         
+            .rf_leftBoxInner {                
+                font-size: 23px;
+                line-height: 33px;
+                color: #0b0c0c;
+                @include respond-to (media-xl) {
+                    font-size: 18px;
+                }
+                @include respond-to (media-md) {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                h2 {
+                    font-size: 39px;
+                    color: #0b0c0c;
+                    font-family: 'tt_normsbold';
+                    margin-bottom: 20px;
+                    @include respond-to (media-xl) {
+                        font-size: 28px;
+                    }
+                    @include respond-to (media-md) {
+                        font-size: 21px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .howItWork_txt {
+                    a {
+                        font-size: 20px;
+                        color: #1a4ccb;
+                        padding-left: 0px;
+                        @include respond-to (media-xl) {
+                            font-size: 16px;
+                        }
+                        @include respond-to (media-md) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }       
+
+        }
+        .rf_rightBox {
+            text-align: right;
+            @include respond-to (media-sm) {
+                text-align: center;
+                margin-top: 25px;
+            }
+        }
+    }
+    .rf_formWrapper {
+        .rf_fieldBox_wrapper {
+            margin: 30px 0px 15px;
+            .rf_fieldBox {
+                width: calc(100% - 250px);
+                margin-bottom: 0px !important;
+                @include respond-to (media-xl) {
+                    width: calc(100% - 200px);
+                }
+                @include respond-to (media-sm) {
+                    width: calc(100% - 90px);
+                }
+                .rf_filed {
+                    padding: 17px 20px;
+                    border-radius: 4px;
+                    border: 1px solid #cccccc;
+                    @include respond-to (media-xl) {
+                        font-size: 14px;
+                        padding: 10px 10px;
+                    }
+                }        
+            }
+            .rf_send_btn {
+                font-size: 15px;
+                width: 100%;
+                max-width: 235px;
+                text-align: center;
+                font-family: 'tt_normsbold';
+                margin-left: 15px;
+                background: #0a339d;
+                border: 1px solid #0a339d;
+                @include respond-to (media-xl) {
+                    max-width: 185px;
+                }
+                @include respond-to (media-sm) {
+                    max-width: 85px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .rf_shareBtn_box {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 15px;
+                    width: 100%;
+                    max-width: 225px;
+                    @include respond-to (media-xl) {
+                        max-width: 175px;
+                    }
+                    @include respond-to (media-lg) {
+                        max-width: 125px;
+                        margin-bottom: 10px;
+                    }
+                    @include respond-to (media-xs) {
+                        max-width: calc(50% - 8px);
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    &:nth-child(2n) {
+                        @include respond-to (media-xs) {
+                            margin-right: 0px;
+                        }
+                    }
+                    a {
+                        font-size: 14px;
+                        color: #181818;
+                        display: inline-block;
+                        width: 100%;;
+                        padding: 17px 10px;
+                        border-radius: 4px;
+                        text-align: center;
+                        border: 1px solid #cccccc;
+                        background: #f5f8fb;
+                        vertical-align: middle;
+                        @include respond-to (media-xl) {
+                            padding: 8px;
+                        }
+                        img {
+                            margin-right: 7px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

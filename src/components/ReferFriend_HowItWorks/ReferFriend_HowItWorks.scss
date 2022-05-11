@@ -1,0 +1,138 @@
+@import '../../mixin.scss';
+
+.rf_howItWork_section {
+    padding: 100px 0px;
+    background-image: url('../../assets/images/rf_bottom_section_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;    
+    @include respond-to (media-md) {
+        padding: 30px 0px;
+    } 
+    .rf_howItWork_process {
+        width: 100%;
+        max-width: 1205px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        @include respond-to (media-lg) {
+            max-width: 960px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .mlr_25 {
+            margin-left: -25px;
+            margin-right: -25px;
+            @include respond-to (media-md) {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            .plr_25 {
+                padding-left: 25px;
+                padding-right: 25px;
+                @include respond-to (media-md) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }        
+        .rf_howItWork_box {
+            font-size: 22px;
+            line-height: 35px;
+            color: #000000;            
+            height: 380px;   
+            padding: 0px 20px;          
+            margin-top: 80px;
+            text-align: center;
+            position: relative;
+            border-radius: 30px;
+            background: #ffffff;
+            box-shadow: 0px 0px 10px 10px #dddddd30;
+            @include respond-to (media-xl) {
+                font-size: 18px;
+                line-height: 28px;
+                height: 340px;  
+            }
+            @include respond-to (media-lg) {
+                font-size: 14px;
+                line-height: 24px;
+                height: 300px;
+                padding: 0px 10px; 
+            }
+            @include respond-to (media-sm) {
+                width: 100%;
+                height: auto;
+                max-width: 400px;
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0px 20px 30px;
+            }
+            .rf_processNo {
+                width: 85px;
+                height: 85px;
+                font-size: 40px;
+                color: #ffffff;
+                text-align: center;
+                line-height: 85px;                
+                border-radius: 50%;
+                background: #0a339d;
+                position: relative;
+                top: -30px;
+                margin: 0px auto;
+                font-family: 'tt_normsextrabold';
+                @include respond-to (media-xl) {
+                    width: 70px;
+                    height: 70px;
+                    font-size: 30px;
+                    line-height: 70px;                    
+                }   
+                @include respond-to (media-md) {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 18px;
+                    line-height: 50px; 
+                    top: -20px;
+                }             
+            }
+            .rf_processImage {
+                @include respond-to (media-xl) {
+                    max-width: 70px;
+                    margin: auto;
+                }
+                @include respond-to (media-md) {
+                    max-width: 55px;
+                }
+            }
+            h3 {
+                font-size: 24px;
+                color: #102a6c;
+                margin: 30px auto 20px;
+                text-transform: uppercase;
+                font-family: 'tt_normsextrabold';
+                @include respond-to (media-xl) {
+                    font-size: 21px;
+                    margin: 20px auto 10px;
+                }
+                @include respond-to (media-lg) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    
+}
+.rf_sectionHD {
+    h2 {
+        font-size: 40px;
+        color: #000000;
+        font-family: 'tt_normsextrabold';
+        text-transform: uppercase;
+        @include respond-to (media-xl) {
+            font-size: 30px;
+        }
+        @include respond-to (media-sm) {
+            font-size: 21px;
+        }
+    }        
+}

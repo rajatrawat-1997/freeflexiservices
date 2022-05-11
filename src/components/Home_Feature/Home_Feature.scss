@@ -1,0 +1,224 @@
+@import '../../mixin.scss';
+
+.home_feature {
+    padding: 100px 0px 80px;
+    margin-top: 100px;
+    background-image: url('../../assets/images/feature_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include respond-to (media-md) {
+        padding: 40px 0px 30px;
+        margin-top: 70px;
+    }
+    .container {
+        position: relative;
+    }
+    .home_feature_topsection {
+        font-size: 27px;
+        color: rgba(0,0,0,0.80);
+        width: 100%;
+        max-width: 1250px;
+        text-align: center;
+        padding: 0px 15px;
+        margin: 0px auto;        
+        font-family: 'tt_normsmedium';
+        @include respond-to (media-xl) {
+            font-size: 18px;
+            line-height: 28px;
+            max-width: 890px;
+        }
+        @include respond-to (media-md) {
+            font-size: 16px;
+            line-height: 26px;
+            padding: 0px 25px;
+        }
+        h2 {
+            color: #000000;
+            font-size: 63px;
+            line-height: normal;
+            text-transform: uppercase;
+            font-family: 'tt_normsextrabold';
+            margin-bottom: 20px;
+            @include respond-to (media-xl) {
+                font-size: 38px;
+            }
+            @include respond-to (media-md) {
+                font-size: 30px;
+            }
+            @include respond-to (media-xs) {
+                font-size: 26px;
+            }
+        }
+    }
+    .home_feature_boxwarppers {
+        margin-top: 40px;
+        .home_feature_listwrap {
+            @include respond-to (media-lg) {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .carousel_item_padding_15 {
+                padding: 15px;
+            }
+            .react-multi-carousel-list {
+                position: static;
+                .react-multiple-carousel__arrow {
+                    background: transparent !important;
+                    &::before {
+                        font-size: 50px;
+                        color: #090909;
+                        @include respond-to (media-md) {
+                            font-size: 30px;
+                        }
+                    }
+                } 
+                .react-multiple-carousel__arrow--left {
+                    left: -30px;
+                    @include respond-to (media-lg) {
+                        left: -20px;
+                    }
+                    @include respond-to (media-md) {
+                        left: -5px;
+                    }
+                }
+                .react-multiple-carousel__arrow--right {
+                    right: -30px;
+                    @include respond-to (media-lg) {
+                       right: -20px; 
+                    }
+                    @include respond-to (media-md) {
+                        right: -5px;
+                    }
+                }               
+            }
+            .home_feature_list {
+                position: relative;
+                padding: 30px 30px 40px;
+                border-radius: 15px;
+                position: relative; 
+                overflow: hidden; 
+                min-height: 376px;  
+                box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.19);        
+                @include respond-to (media-xl)  {
+                    min-height: 285px;
+                }
+                &:last-child {
+                    margin-right: 0px;
+                }
+                .home_feature_box {
+                    font-size: 23px;
+                    font-family: 'tt_normsmedium';
+                    @include respond-to (media-xl) {
+                        font-size: 16px;
+                    }
+                    @include respond-to (media-sm) {
+                        font-size: 16px;
+                    }
+                    .feature_comingsoon {
+                        font-size: 20px;
+                        color: #5d86ef;
+                        font-family: 'tt_normsblack';
+                        min-height: 24px;
+                        @include respond-to (media-xl) {
+                            font-size: 14px;
+                            min-height: 15px;
+                        }
+                    }
+                    h3 {
+                        font-size: 40px;
+                        font-family: 'tt_normsbold';
+                        @include respond-to (media-xl) {
+                            font-size: 24px;
+                        }
+                    }
+                    p {
+                        max-width: 240px;
+                        @include respond-to (media-xl) {
+                            max-width: 174px;
+                        }
+                    }
+                }
+            }
+            .home_swap_product {
+                color: #ffffff; 
+                .home_swap_icon {
+                    position: absolute;
+                    top: auto;
+                    bottom: 0;
+                    right: -80px;
+                    @include respond-to (media-xl) {
+                        max-width: 200px;
+                        right: -70px;
+                    }
+                }
+            }
+            .home_earn_product {
+                color: #0a339d;
+                background: #ffffff;
+                .earnhand_icon {
+                    position: absolute;
+                    bottom: 10px;
+                    right: -32px;
+                    @include respond-to (media-xl) {
+                        max-width: 150px;
+                        right: -20px;
+                    }
+                }
+            }
+            .home_loan_product {
+                color: #ffffff; 
+                .home_loan_icon {
+                    position: absolute;
+                    bottom: 0px;
+                    right: -45px;
+                    @include respond-to (media-xl) {                        
+                        max-width: 140px;
+                        right: -45px;
+                    }
+                }
+            }
+            .home_enhanced_earn {
+                color: #0a339d;
+                background: #ffffff;
+                .home_ee_icon {
+                    position: absolute;
+                    bottom: 0px;
+                    right: -25px;
+                    @include respond-to (media-xl) {
+                        max-width: 150px;
+                        right: -15px;
+                    }
+                }
+            }
+            .home_automated_product {
+                color: #ffffff; 
+                .home_automated_icon {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 0px;
+                    @include respond-to (media-xl) {
+                        max-width: 160px;
+                        right: -15px;
+                    }
+                }
+            }
+            .home_portfolio_reporting {
+                color: #0a339d;
+                background: #ffffff;
+                .home_portfolio_icon {
+                    position: absolute;
+                    bottom: 10px;
+                    right: -20px;
+                    @include respond-to (media-xl) {
+                        max-width: 160px;
+                        right: -25px;
+                    }
+                }
+            }
+        }
+    }
+    .gradient_bg {      
+        background: rgb(29,79,209);
+        background: linear-gradient(180deg, rgba(29,79,209,1) 0%, rgba(10,51,157,1) 100%);
+    }
+}

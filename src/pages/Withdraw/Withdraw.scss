@@ -1,0 +1,88 @@
+@import '../../mixin.scss';
+
+.form-group {
+    .withdraw_inputfield {
+        font-size: 22px;
+        color: #9e9e9e;
+        padding: 14px 25px;
+        border-radius: 4px;
+        @include respond-to (media-sm) {
+            font-size: 14px;
+            padding: 9px 10px 9px 15px;
+        }
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+    .maplocation_field {
+        padding: 14px 55px 14px 25px;
+        @include respond-to (media-sm) {
+            font-size: 14px;
+            padding: 9px 40px 9px 10px;
+        }
+    }
+    .mwa_field {
+        padding: 14px 80px 14px 25px;
+         @include respond-to(media-sm) {
+            padding: 9px 55px 9px 15px;
+        }
+    }
+    .maplocation_icon {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        @include respond-to (media-sm) {
+            top: 10px;
+            right: 15px;
+        }
+    }
+}
+.alert_primaryBox {
+    font-size: 20px;
+    color: #4c4c4c !important;
+    @include respond-to (media-sm) {
+        font-size: 14px;
+    }
+    a {
+        color: #0a339d;
+    }
+}
+.attention_listWrap {
+    .attention_subHD {
+        font-size: 20px;        
+        color: #000000;
+        margin-bottom: 30px;
+        font-family: 'tt_normsbold';
+        @include respond-to (media-sm) {
+            margin-bottom: 20px;
+        }
+    }
+    ol {
+        li {
+            font-size: 18px;
+            color: #4c4c4c;
+            list-style-type: decimal;
+            margin-bottom: 15px;
+            @include respond-to (media-sm) {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.postFee_amountSec {
+    border-bottom: 1px solid transparent;
+    margin-bottom: 0px;
+    .post_fee {
+        font-size: 25px;
+        font-weight: 800;
+        text-align: right;
+        @include respond-to (media-sm) {
+            font-size: 18px;            
+        }
+        @include respond-to (media-xs) {
+            text-align: left;
+        }
+    }
+}

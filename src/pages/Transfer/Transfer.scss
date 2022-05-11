@@ -1,0 +1,109 @@
+@import '../../mixin.scss';
+.transferSwrapBox {
+    margin-bottom: 40px;
+    .transferFrom {
+        min-width: 100px;
+        padding-right: 10px;
+    }
+    .transferTo {
+        min-width: 100px;
+        padding-left: 10px;
+    }
+    .transferToFrom_HD {
+        font-size: 24px;
+        color: #000000;
+        font-weight: 600;
+        @include respond-to (media-sm) {
+            font-size: 18px;
+        }
+    }
+    .transfer_UserName {
+        font-size: 19px;
+        color: #7f7f7f;
+        font-weight: 600;
+        @include respond-to (media-sm) {
+            font-size: 14px;
+        }
+    }
+    .transferSWrap {
+        width: 300px;
+        margin: auto;
+        position: relative;
+        @include respond-to (media-xs) {
+            width: auto;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            background: #a9a9a9;
+            width: 100%;
+            top: 50%;
+            @include respond-to (media-xs) {
+                content: none;
+            }
+        }
+        .transferSWrap_iconBox {
+            position: relative;
+            width: 100px;
+            margin: auto;            
+            z-index: 1;
+            background: #ffffff;
+            @include respond-to (media-sm) {
+                width: 60px;
+                @include respond-to (media-xs) {
+                    width: auto;
+                }
+            }
+            .transferSWrap_icon {
+                width: 55px;
+                height: 55px;   
+                margin: auto;     
+                border-radius: 50%;
+                position: relative;
+                background: #0a339d;
+                cursor: pointer;  
+                @include respond-to (media-sm) {
+                    width: 40px;
+                    height: 40px;
+                }              
+                img {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    left: 0px;
+                    bottom: 0px;
+                    margin: auto;
+                    @include respond-to (media-sm) {
+                        max-width: 25px;
+                    }
+                }
+            }
+        }        
+    }    
+}
+.transfer_subHD {
+    font-size: 22px;
+    color: #000000;
+    font-weight: 600;
+    padding: 20px 0px;    
+    margin: 25px 0px;
+    border-top: 1px solid #a9a9a9;
+    border-bottom: 1px solid #a9a9a9;
+    @include respond-to (media-sm) {
+        font-size: 18px;
+        padding: 10px 0px;
+    }
+}
+.available_amout {
+    font-size: 18px;
+    color: #989898;
+    font-weight: 600;
+    span {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    @include respond-to (media-sm) {
+        font-size: 14px;
+    }
+}

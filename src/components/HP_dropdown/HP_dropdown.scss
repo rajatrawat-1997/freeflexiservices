@@ -1,0 +1,148 @@
+@import '../../mixin.scss';
+
+.hp_dropWrap {
+    .beforelogin_option {
+        min-width: 160px;
+        justify-content: flex-end;
+        @include respond-to (media-sm) {
+            margin-top: 8px;
+        }
+        .logintxt {
+            font-size: 20px;
+            color: #0a339d;
+            font-family: 'tt_normsbold';
+            padding-left: 0;
+            padding-right: 0;
+            @include respond-to (media-xl) {
+                font-size: 16px;
+            }
+            @include respond-to (media-md) {
+                padding: 2px 0px;
+            }
+            
+        }
+        .getstarted_btn {
+            font-size: 20px;
+            color: #fff;
+            font-family: 'tt_normsbold';
+            background-color: #0a339d;
+            margin-left: 45px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all .5s;
+            &:hover, &:focus {
+                box-shadow: none;
+                outline: none; 
+                background: transparent;
+                border-color: #1d2128;
+                &:after, &::before {
+                    transform: scale(1);
+                    border-radius: 0;
+                }
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                background: #1d2128;
+                z-index: -1;
+                transform: translate3D(0,-100%,0);
+                transition: all .5s;
+                transform-origin: center center;
+                transform: scale(1,0);
+            }    
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                background: #1d2128;
+                z-index: -2;
+                transform: translate3D(0,-100%,0);
+                transition: all .5s;
+                transform-origin: center center;
+                transform: scale(1,0);
+            }
+            @include respond-to (media-xl) {
+                font-size: 16px;
+            }
+            @include respond-to (media-md) {
+                font-size: 14px;
+                margin-left: 15px;
+                margin-right: 5px;
+                padding: 3px 5px;
+            }
+            &:hover, &:focus, &:active {
+                outline: none;
+                color: #fff;
+                background-color: #0a339d;
+                box-shadow: none;
+            }
+        }
+        
+    }
+    .hp_dropBtn {
+        font-size: 16px;
+        color: #1f1d1d !important;
+        font-family: 'tt_normsbold';
+        background: transparent !important;
+        border: 0px;
+        &:hover, &:focus, &:active {
+            color: #1f1d1d !important;
+            background: transparent;
+            border: 0px;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+    .dropdown-menu {
+        left: auto !important;
+        right: 10px;
+        @include respond-to (media-sm) {
+            right: auto;
+        }
+    }
+    .user-name {
+        @include respond-to(media-sm) {
+            display: none;
+        }
+    }
+    .dropdown-menu {
+        padding: 0px;
+        .dropdown-item {
+            padding: 5px 0px;
+            &:hover {
+                background-color: #0a339d !important;
+                a {
+                    color: #ffffff !important;
+                }
+            }
+            &:focus {
+                background-color: #0a339d !important;
+                a {
+                    color: #ffffff !important;
+                }
+            }
+            &:active {
+                background-color: #0a339d !important;
+                a {
+                    color: #ffffff !important;
+                }
+            }
+            a {
+                font-size: 16px;
+                color: #1f1d1d;
+                font-family: 'tt_normsbold';
+            }
+        }
+    }    
+    
+}

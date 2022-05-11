@@ -1,0 +1,188 @@
+@import '../../mixin.scss';
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: #ffffff;
+    z-index: 1111;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.3) !important;
+}
+.header-inner {
+    @include respond-to(media-sm) {
+        display: block;
+    }
+}
+.header-left {
+    @include respond-to(media-md) {
+        width: 100%;
+    }
+    .navbar-brand {
+        @include respond-to(media-md) {
+            max-width: 110px;
+        }
+    }
+    .navbar-light {   
+        .navbar-toggler {
+            margin-right: 0px;
+            padding: 0px;
+            border: 0px;
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }  
+                      
+        }          
+        .navbar-nav {  
+            @include respond-to(media-sm) {
+                padding-top: 20px;
+            }     
+            .nav-item {
+                padding-left: 28px;
+                padding-right: 28px;
+                @include respond-to(media-xl) {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+                @include respond-to(media-lg) {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                @include respond-to(media-md) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                @include respond-to(media-sm) {
+                    padding: 10px 0px;
+                }
+                .dropdown-menu {
+                    left: 0px;
+                    border: 0px;
+                }
+            }
+            .nav-link {
+                font-size: 23px;
+                color: #000000;                
+                padding: 0px;
+                position: relative;
+                font-family: 'tt_normsbold';
+                @include respond-to (media-xl) {
+                    font-size: 16px;
+                }
+                @include respond-to (media-md) {
+                    font-size: 16px;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                    width: 0px;
+                    height: 5px;
+                    border: 0px;
+                    border-radius: 30px;
+                    background: transparent;
+                    -webkit-transition:ease-in-out .3s;
+                    -moz-transition:ease-in-out .3s; 
+                    -ms-transition:ease-in-out .3s; 
+                    -o-transition:ease-in-out .3s;
+                     transition:ease-in-out .3s;
+                }
+                &:hover:after {
+                    width: 100%;
+                    background: #0a339d;
+                }
+                @include respond-to(media-sm) {
+                    &:focus {
+                        color: #0a339d !important;
+                    }
+                    &:after {
+                        content: none !important;
+                    }
+                }
+            }
+            .header_caret_icon{
+                &::before {
+                    display: inline-block;
+                    margin-left: 20px;
+                    vertical-align: middle;
+                    content: "";
+                    width: 14px;
+                    height: 8px;
+                    position: absolute;
+                    right: -25px;
+                    top: 16px;
+                    background-image: url('../../assets/images/dropdown_caretIcon.png');
+                    background-repeat: no-repeat;
+                    @include respond-to (media-xl) {
+                        top: 9px;
+                        right: -20px;
+                    }
+                    @include respond-to(media-md) {
+                        margin-left: 10px;
+                        top: 8px;
+                    }
+                    @include respond-to(media-sm) {
+                        right: 0px;
+                    }
+                }
+            }
+            .dropdown-item {
+                padding: 7px 10px;
+                &:hover {
+                    background-color: transparent;                    
+                }
+                .nav-link {
+                    &:hover {
+                        color: #0a339d;
+                    }
+                    &:after {
+                        content: none !important;
+                    }
+                }
+            }
+        }
+    } 
+    
+}
+.header-right {
+    @include respond-to(media-sm) {
+        position: absolute;
+        top: 8px;
+        right: 50px;
+    }
+    .hpf-image {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        margin-right: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+        vertical-align: middle;
+        @include respond-to(media-xs) {
+            width: 30px;
+            height: 30px;
+            margin-right: 0px;
+        }
+    }
+    .dropdown-toggle{
+        &:after {
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: middle;
+            content: "";
+            border-top: 0em solid;
+            border-right: 0em solid transparent;
+            border-bottom: 0;
+            border-left: 0em solid transparent;
+            width: 14px;
+            height: 8px;
+            background-image: url('../../assets/images/dropdown_arrow.png');
+            background-repeat: no-repeat;
+            @include respond-to(media-md) {
+                margin-left: 10px;
+            }
+        }
+    }
+}

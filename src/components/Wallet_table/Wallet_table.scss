@@ -1,0 +1,78 @@
+@import '../../mixin.scss';
+
+.table_fw {
+    width: 100%;
+}
+.wallet_tableWrap {
+    table {
+        min-width: 1100px;
+        @include respond-to (media-xl) {
+            min-width: 900px;
+        }
+        tr {
+            &:last-child {
+                td {
+                    border-bottom: 1px solid transparent !important; 
+                }
+            }
+            td {
+                font-size: 22px;
+                color: #727272;
+                padding: 30px 15px;                 
+                min-width: 150px;
+                max-width: 250px; 
+                font-family: 'tt_normsmedium';
+                border-bottom: 1px solid #e0e0e0;  
+                &:first-child {
+                    min-width: 110px;
+                    max-width: 110px;
+                    text-align: center;
+                    @include respond-to (media-xl) {
+                        min-width: 90px;
+                        max-width: 90px;
+                    }
+                }       
+                @include respond-to (media-xl) {
+                    font-size: 14px;
+                    padding: 15px 15px;
+                }
+                @include respond-to (media-sm) {
+                    padding: 15px 5px;
+                    min-width: 150px;
+                    max-width: 200px; 
+                }
+                .wt_blacktxt {
+                    font-size: 24px;
+                    color: #000000;
+                    margin-bottom: 10px;
+                    @include respond-to (media-xl) {
+                        font-size: 16px;
+                        margin-bottom: 0px;
+                    }
+                }
+                .wt_icon {
+                    margin-bottom: 10px;
+                    @include respond-to (media-xl) {
+                        max-width: 40px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+            }
+            .align_rgt {
+                text-align: right;
+            }
+            .amout_black {
+                color: #000000;
+            }
+        }
+        tr {
+            &.border_0 {
+                td {
+                    border: 0px;
+                }
+                
+            }
+        }
+    }
+}

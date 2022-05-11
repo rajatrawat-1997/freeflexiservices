@@ -1,0 +1,421 @@
+@import '../../mixin.scss';
+
+.whiteBox_wrappers {
+    width: 100%;
+    max-width: 690px;
+    position: relative;
+    padding: 0px 15px;
+    margin: 0px auto;
+    min-height: calc(100vh - 143px);
+    @include respond-to (media-sm) {
+        padding: 0px 15px;
+        min-height: calc(100vh - 180px);
+    }
+    .whiteBox {
+        width: 100%;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 1px -5px 20px 10px #e9e9e9;
+        @include respond-to(media-sm) {
+            padding: 15px;
+        }
+    }
+    .history_btn {
+        font-size: 20px;
+        color: #ffffff;
+        background: #0a339d;
+        display: block;
+        text-decoration: none;
+        padding: 10px 40px;
+        border-radius: 4px;
+        font-family: 'tt_normsbold';
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        transition: all .5s;
+        &:hover, &:focus {
+            box-shadow: none;
+            outline: none; 
+            background: transparent;
+            border-color: #1d2128;
+            &:after, &::before {
+                transform: scale(1);
+                border-radius: 0;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            background: #1d2128;
+            z-index: -1;
+            transform: translate3D(0,-100%,0);
+            transition: all .5s;
+            transform-origin: center center;
+            transform: scale(1,0);
+        }    
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            background: #1d2128;
+            z-index: -2;
+            transform: translate3D(0,-100%,0);
+            transition: all .5s;
+            transform-origin: center center;
+            transform: scale(1,0);
+        }
+        
+        @include respond-to (media-xl) {
+            font-size: 16px;
+            padding: 10px 30px;
+        }
+        @include respond-to (media-sm) {
+            padding: 6px 20px;
+        }
+    }
+    .mb_30 {
+        margin-bottom: 30px;
+        @include respond-to (media-sm) {
+            margin-bottom: 15px;
+        }
+    }
+    .sell_HD {
+        font-size: 27px;
+        color: #000000;
+        font-family: 'tt_normsbold';
+        @include respond-to (media-sm) {
+            font-size: 18px;
+        }
+    }
+    .avaliableBalance_text {
+        font-size: 18px;
+        color: #7c7c7c; 
+        @include respond-to (media-sm) {
+            font-size: 14px;
+        }       
+    }
+    .form-group {
+        position: relative;
+        .lightBg_filed {
+            font-size: 22px;
+            color: #9e9e9e;            
+            padding: 14px 25px;
+            border-radius: 4px;
+            background: #f7f7f7;
+            border: 1px solid #f7f7f7;
+            @include respond-to (media-xl) {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+            @include respond-to (media-sm) {
+                font-size: 14px;
+                padding: 9px 10px;
+            }
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        .sell_field {
+            padding: 14px 80px 14px 25px;
+            @include respond-to(media-xl) {
+                font-size: 16px;
+                padding: 12px 70px 12px 20px;    
+            }
+            @include respond-to(media-sm) {
+                font-size: 14px;
+                padding: 9px 50px 9px 10px;    
+            }
+        }
+        .max_txt {
+            font-size: 22px;
+            color: #0a339d;
+            font-family: 'tt_normsbold';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            @include respond-to (media-xl) {
+                font-size: 18px;
+                top: 10px;
+                right: 15px;
+            }
+            @include respond-to (media-sm) {
+                font-size: 16px;
+                top: 8px;
+                right: 10px;
+            }
+        }
+        .lightBg_dropfiled {
+            font-size: 22px;
+            color: #474747;                        
+            padding: 14px 25px;
+            border-radius: 30px;
+            background: #f7f7f7;
+            border: 1px solid #f7f7f7;
+            background-image: url('../../assets/images/downField_icon.png');
+            background-repeat: no-repeat;
+            background-position: right 25px center;
+            font-family: 'tt_normsbold';
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+    .currency_dropBox_wrap {
+        .btn-group {
+            display: block;
+        }
+        
+        .langBx {
+            display: block;
+            position: relative;
+        }
+        .lang {
+            font-size: 22px;  
+            position: relative;  
+            z-index: 111;
+            @include respond-to (media-xl){
+                font-size: 16px;
+            } 
+            img {
+                margin-right: 10px;
+                @include respond-to (media-sm)
+                {
+                    max-width: 25px;
+                }
+            }
+            .css-yk16xz-control {
+                background: #f7f7f7;
+                border-radius: 4px;
+                border: 1px solid #f7f7f7;
+                outline: none !important;
+                box-shadow: none !important;
+                border-color: #f7f7f7;
+                padding: 6px 0px;
+                @include respond-to (media-sm){
+                    padding: 1.5px 0px;
+                }
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                    border-color: #f7f7f7;
+                }  
+                .css-tlfecz-indicatorContainer {
+                    color: #000000;
+                }             
+            }
+            .css-1pahdxg-control {
+                padding: 6px 0px;
+                @include respond-to (media-sm){
+                    padding: 1.5px 0px;
+                }
+                &:hover {
+                    background: #f7f7f7;
+                    border-radius: 4px;
+                    border: 1px solid #f7f7f7;
+                    outline: none !important;
+                    box-shadow: none !important;
+                    border-color: #f7f7f7;
+                }
+                img {
+                    margin-right: 10px;
+                }
+            }
+            .css-1okebmr-indicatorSeparator {
+                display: none;
+            }
+            a {
+                display: block;
+                color: #474747;
+                text-decoration: none;
+                font-family: 'tt_normsbold';
+                &:hover, &:focus {
+                    color: #474747;
+                }
+                span {
+                    img {
+                        margin-right: 10px;
+                        @include respond-to(media-sm) {
+                            max-width: 25px;
+                        }
+                    }
+                }
+            }
+            .langTrans{
+                &:after {
+                    display: inline-block;
+                    margin-left: 20px;
+                    vertical-align: middle;
+                    content: "";
+                    border-top: 0em solid;                    
+                    border-bottom: 0;
+                    border-right: 0em solid transparent;
+                    border-left: 0em solid transparent;
+                    width: 20px;
+                    height: 12px;
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+                    background-image: url('../../assets/images/downField_icon.png');
+                    background-repeat: no-repeat;   
+                    @include respond-to(media-sm) {
+                        top: 20px;
+                        right: 5px;
+                        background-size: 15px;
+                    }             
+                }
+            }
+        }
+        .dropDownLang {
+            display: none;
+            position: absolute;	    
+            left: 0px;;
+            z-index: 60;
+            width: 100%;
+            margin-top: 15px;
+            background: #ffffff;
+            border-radius: 4px;
+            border: 1px solid #ccc;	
+            box-shadow: 0px 2px 2px 0px #ccc;
+            ul {
+                padding-left: 0px;
+                margin: 5px 0px;
+                li {
+                    display: block;
+                    padding: 10px;
+                }
+            }            
+        }
+    }
+
+    .deposit_txtLink {
+        font-size: 18px;
+        color: #0a339d;
+        text-decoration: none;
+        font-family: 'tt_normsbold';
+        @include respond-to (media-sm) {
+            font-size: 14px;
+        }
+        &:focus {
+            color: #0a339d;
+        }
+    }
+    .swap_iconBox {
+        text-align: center;
+        position: relative;
+        margin: 20px 0px 55px;
+        @include respond-to (media-sm) {
+            margin: 15px 0px 35px;
+        }
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            background: #b9b9b9;
+            left: 0;
+            top: 15px;
+        }
+        span {
+            display: inline-block;
+            background: #fff;
+            z-index: 11;
+            position: relative;
+            width: 90px;
+        }
+    }
+    .avaliableBalance_value {
+        color: #000000;
+        display: inline-block;
+        font-family: 'tt_normsbold';   
+    }
+    .buy_second_value {
+        color: #6eca98;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    .continueBtn_wrap {
+        padding: 35px 0px;
+        @include respond-to (media-sm) {
+            padding: 25px 0px;
+        }
+        .continue_btn {
+            font-size: 30px;
+            line-height: 30px;
+            color: #ffffff;            
+            text-align: center;
+            width: 100%;
+            padding: 20px 25px;
+            background: #0a339d;
+            border: 1px solid #0a339d;
+            border-radius: 4px;
+            font-family: 'tt_normsbold';
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all .5s;
+            &:hover, &:focus {
+                box-shadow: none;
+                outline: none; 
+                background: transparent;
+                border-color: #1d2128;
+                &:after, &::before {
+                    transform: scale(1);
+                    border-radius: 0;
+                }
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                background: #1d2128;
+                z-index: -1;
+                transform: translate3D(0,-100%,0);
+                transition: all .5s;
+                transform-origin: center center;
+                transform: scale(1,0);
+            }    
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                background: #1d2128;
+                z-index: -2;
+                transform: translate3D(0,-100%,0);
+                transition: all .5s;
+                transform-origin: center center;
+                transform: scale(1,0);
+            }
+            @include respond-to (media-xl){
+                font-size: 21px;
+                line-height: 21px;
+                padding: 14px 20px;                
+            }
+            @include respond-to (media-md){
+                font-size: 18px;
+                line-height: 18px;
+                padding: 10px 20px;                
+            }            
+        }
+    }
+}
+

@@ -1,0 +1,16 @@
+@import '../../mixin.scss';
+
+.referfriend_wrappers {
+    .middleCon_Inner {
+        padding-top: 75px;
+        @include respond-to (media-md) {
+            padding-top: 60px;
+        }
+    }
+}
+.howItWork_txt a{
+
+    text-decoration: none;
+}
+
+

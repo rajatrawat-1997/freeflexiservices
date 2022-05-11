@@ -1,0 +1,118 @@
+@import '../../mixin.scss';
+
+.home_topBanner {
+    background-image: url('../../assets/images/newupdated.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 770px; 
+    @include respond-to (media-xl)  {
+        height: 630px;
+    }
+    @include respond-to (media-lg)  {
+        height: 500px;
+    }
+    @include respond-to (media-md)  {
+        height: 400px;
+    }
+    @include respond-to (media-sm)  {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .home_topBanner_cont {
+        padding-top: 160px;
+        @include respond-to (media-xl) {
+            padding-top: 130px;
+        }
+        @include respond-to (media-md) {
+            padding-top: 90px;
+        }
+        @include respond-to (media-sm) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .home_topBanner_HD {
+            font-size: 52px;
+            color: #ffffff;
+            font-family: 'tt_normsextrabold';
+            text-transform: uppercase;
+            @include respond-to (media-xl) {
+                font-size: 35px;
+            }
+            @include respond-to (media-lg) {
+                font-size: 28px;
+            }
+            @include respond-to (media-md) {
+                font-size: 23px;
+            }
+            @include respond-to (media-xs) {
+                font-size: 21px;
+            }
+        }
+        .home_topBanner_btn {
+            margin-top: 25px;
+            a {
+                display: inline-block;
+                font-size: 30px;
+                color: #ffffff;
+                padding: 15px 60px;
+                border-radius: 4px;
+                background: #0a339d;
+                text-decoration: none;
+                font-family: 'tt_normsbold'; 
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                transition: all .5s;
+                &:hover, &:focus {
+                    box-shadow: none;
+                    outline: none; 
+                    background: transparent;
+                    border-color: #1d2128;
+                    &:after, &::before {
+                        transform: scale(1);
+                        border-radius: 0;
+                    }
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    background: #1d2128;
+                    z-index: -1;
+                    transform: translate3D(0,-100%,0);
+                    transition: all .5s;
+                    transform-origin: center center;
+                    transform: scale(1,0);
+                }    
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    background: #1d2128;
+                    z-index: -2;
+                    transform: translate3D(0,-100%,0);
+                    transition: all .5s;
+                    transform-origin: center center;
+                    transform: scale(1,0);
+                } 
+                @include respond-to (media-xl) {
+                    font-size: 18px;
+                    padding: 9px 25px;
+                }
+                @include respond-to (media-xs) {
+                    font-size: 16px;
+                    padding: 8px 25px;
+                }
+            }
+        }
+    }
+    
+}

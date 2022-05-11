@@ -1,0 +1,8 @@
+
+.formdesignfixed{
+   max-width: 50%;
+   margin:auto;
+   @media only screen and (max-width: 600px) {
+      width: 100%;
+  }
+}

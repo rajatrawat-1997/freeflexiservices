@@ -1,0 +1,59 @@
+@import '../../mixin.scss';
+
+.walletUsd_topwrapper {
+    .wallet_topwrapper {
+        @include respond-to (media-md) {
+            display: flex;
+        }
+        @include respond-to (media-sm) {
+            display: block;
+        }
+        .wallet_topSec {
+            @include respond-to (media-md) {
+                width: 40%;
+            }
+            @include respond-to (media-sm) {
+                width: 100%;
+            }
+            .wallet_topBox {
+                width: 100%;
+                .usted_logoTxt {
+                    .usdt_logotext {
+                        font-size: 30px;
+                        font-family: 'tt_normsextrabold';
+                        @include respond-to (media-xl) {
+                            font-size: 22px;
+                        }
+                    }                    
+                    .tb_title {
+                        font-size: 20px;
+                        @include respond-to (media-xl) {
+                            font-size: 16px;
+                        }
+                    }
+                    .eb_value {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+        .wallet_topnav {
+            @include respond-to (media-md) {
+                width: 60%;
+                margin-top: 0px;
+            }
+            @include respond-to (media-sm) {
+                width: 100%;
+                margin-top: 30px;
+            }
+            ul {
+                @include respond-to (media-md){
+                    justify-content: flex-end;
+                }
+                @include respond-to (media-sm){
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

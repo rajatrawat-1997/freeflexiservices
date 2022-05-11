@@ -1,0 +1,147 @@
+@import '../../mixin.scss';
+
+.deposit_currency_dropbox {
+    .langTrans {
+        font-size: 22px;
+        padding: 14px 10px;
+        background: #f7f7f7;
+        position: relative;
+        z-index: 111;
+        border-radius: 4px;
+        @include respond-to (media-xl) {
+            font-size: 16px;
+            padding: 10px;            
+        }
+        &:after {
+            top: 20px !important;
+        }
+    }    
+}
+.exchangeRate_note {
+    font-size: 18px;
+    line-height: 28px;
+    color: #7c7c7c;
+    @include respond-to (media-sm) {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+.mb-65 {
+    margin-bottom: 65px;
+    @include respond-to (media-xl) {
+        margin-bottom: 35px;
+    }
+    @include respond-to (media-lg) {
+        margin-bottom: 15px;
+    }
+}
+.checkBox_list {
+    ul {
+        li {
+            display: inline-block;
+            width: 33.333%;
+            padding-right: 15px;
+        }
+    }
+}
+.checkbox_29  {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 600;
+    @include respond-to (media-xl) {
+        font-size: 16px;
+    }
+    @include respond-to (media-xl) {
+        font-size: 14px;
+    }
+    input[type="checkbox"] {
+        width: 29px;
+        height: 29px;
+        margin-top: 0px;
+        margin-right: 15px;
+        border-radius: 4px;
+        border: 1px solid #858585;
+        vertical-align: middle !important;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        @include respond-to (media-xl) {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        @include respond-to (media-xl) {
+            width: 20px;
+            height: 20px;
+        }
+    }   
+}
+.depositeProtocol_Txt {
+    font-size: 18px;
+    color: #989898;
+    align-self: center;
+    text-align: right;
+    @include respond-to (media-sm) {
+        font-size: 14px;
+    }
+    
+}
+.upload_fileBox {
+    .upload_filenameField {
+        width: 100%;
+        padding: 9px 50px 9px 10px;
+    }
+    .filedeposit_add {
+        position: absolute;
+        width: 60px;
+        height: 98%;
+        top: 3px;
+        right: 0;
+        @include respond-to (media-sm) {
+            width: 35px;
+        }
+        .form-control-file {            
+            width: 100%;
+            opacity: 0;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        .fileupload_icon{            
+            position: absolute;
+            left: 30%;
+            top: 45%;
+            transform: translate(-50% , -50%);
+        }
+    }
+}
+
+.QR_code_secction {
+    font-size: 20px;
+    color: #989898;
+    text-align: center;
+    font-family: 'tt_normsmedium';
+    @include respond-to (media-lg) {
+        font-size: 16px;
+    }
+    .QR_code_img  {
+        margin-bottom: 20px;
+    }
+}
+.depositBotoom_note {
+    font-size: 17px;
+    line-height: 27px;
+    color: #989898;
+    text-align: center;
+    padding: 40px 15px 10px;
+    @include respond-to (media-sm) {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 20px 15px 10px;
+    }
+    a {
+        color: #0a339d;
+        text-decoration: none;
+    }
+}

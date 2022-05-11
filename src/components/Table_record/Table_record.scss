@@ -1,0 +1,71 @@
+@import '../../mixin.scss';
+
+.rdt_TableHeadRow {
+    .rdt_TableCol {
+        font-size: 18px;
+        color: #000000;
+        font-weight: 700;
+        padding: 20px 40px;
+        background-color: #e5e5e5;
+        &:last-child {
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            .fqjRsv {
+                order: 2;
+            }
+        }
+        @include respond-to (media-sm) {
+            font-size: 15px;
+            padding: 15px 10px;
+        }
+        .hkcGBu {
+            color: #000000;
+            font-weight: 700;
+            overflow: unset;
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+}
+.rdt_TableBody {
+    .rdt_TableRow {
+        background-color: transparent;
+        border: 0px;
+        border-width: 0px !important;
+        &:hover {
+            background-color: transparent;
+            border: 0px;
+            border-width: 0px !important;
+            outline-width: 0px;
+        }
+        .rdt_TableCell {
+            font-size: 18px;
+            color: #11162b;
+            padding: 19px 40px;
+            border-bottom: 1px solid #e0e0e0;
+            &:last-child {
+                -webkit-box-pack: start;
+                -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+                // div{
+                //     padding-left: 18px;
+                // }
+            }
+            @include respond-to (media-sm) {
+                font-size: 15px;
+                padding: 14px 10px;
+            }
+        }
+        &:last-child {
+            .rdt_TableCell {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    
+}
+

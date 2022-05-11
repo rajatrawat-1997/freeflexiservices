@@ -1,0 +1,32 @@
+@import '../../mixin.scss';
+
+.table_fw {
+    width: 100%;
+}
+.flexibleEarn_tableWrap {
+    table {
+        tr {
+            td {
+                font-size: 24px;
+                color: #6d6d6d;
+                padding: 30px 15px;
+                font-weight: 600;
+                border-bottom: 1px solid #e0e0e0;
+                @include respond-to (media-xl) {
+                    font-size: 18px;
+                    padding: 15px 15px;
+                }
+                @include respond-to (media-sm) {
+                    font-size: 15px;
+                    padding: 15px 5px;
+                }
+            }
+            .align_rgt {
+                text-align: right;
+            }
+            .amout_black {
+                color: #000000;
+            }
+        }
+    }
+}

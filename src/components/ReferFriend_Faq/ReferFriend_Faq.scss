@@ -1,0 +1,104 @@
+@import '../../mixin.scss';
+
+.bg_white {
+    background: #ffffff;
+}
+.rf_faq_section {
+    padding: 60px 130px;
+    @include respond-to (media-xl) {
+        padding: 60px 40px;
+    }
+    @include respond-to (media-md) {
+        padding: 30px 0px;
+    }
+    .accordion {
+        border: 0px;
+        margin-top: 40px;
+        border-radius: 0px;
+        @include respond-to (media-md) {
+            margin-top: 30px;
+        }
+        .accordion__item {
+            margin-top: 10px;
+            .accordion__button {        
+                font-size: 21px;
+                color: #e7dcdc;
+                padding: 10px 55px 10px 35px;
+                position: relative;
+                background-color: #0a339d;
+                @include respond-to (media-md) {
+                    font-size: 18px;
+                    padding-left: 10px;
+                }
+                @include respond-to (media-sm) {
+                    font-size: 16px;
+                    padding-left: 10px;
+                    padding-right: 40px;
+                }
+                &:before {
+                    position: absolute;
+                    right: 5px;
+                    top: 40%;
+                    z-index: 1;
+                    transform: rotate(45deg);
+                    @include respond-to (media-sm) {
+                        right: 0px;
+                    }
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    background: #7391e1;
+                    top: 0;
+                    width: 45px;
+                    height: 100%;
+                    @include respond-to (media-sm) {
+                        width: 30px;
+                    }
+                }
+            }
+            .accordion__button[aria-expanded='true']::before, 
+            .accordion__button[aria-selected='true']::before {
+                transform: rotate(-135deg);
+            }
+            .accordion__panel {
+                padding: 40px 35px;
+                font-size: 20px;
+                line-height: 30px;
+                color: #505050;
+                border: 1px solid #dfdfdf;
+                @include respond-to (media-xl) {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                @include respond-to (media-md) {
+                    font-size: 14px;
+                    line-height: 24px;
+                    padding: 20px 15px;
+                }
+                ul {
+                    padding-left: 20px !important;
+                    li {
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: #505050;
+                        list-style-type: disc;
+                        margin-bottom: 30px;
+                        @include respond-to (media-xl) {
+                            font-size: 18px;
+                            line-height: 28px;
+                        }
+                        @include respond-to (media-md) {
+                            font-size: 14px;
+                            line-height: 24px;
+                        }
+                        &:last-child {
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }        
+}

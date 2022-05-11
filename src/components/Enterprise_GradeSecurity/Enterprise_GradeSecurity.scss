@@ -1,0 +1,166 @@
+@import '../../mixin.scss';
+
+.epg_security_section {
+    background-image: url('../../assets/images/eps_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 145px;
+    @include respond-to (media-xl) {
+        background-size: contain;
+        padding-top: 95px;
+    }
+    @include respond-to (media-lg) {
+        padding-top: 60px;
+    }
+    @include respond-to (media-sm) {
+        padding-top: 30px;
+        background-size: cover;
+        background-position: 40%;
+    }
+    .epg_security_inner {
+        display: flex;
+        display: -ms-flexbox;
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        .epg_securitybox {
+            flex: 0 0 50%;
+            -ms-flex: 0 0 50%;
+            max-width: 50%;
+            padding-left: 15px;
+            padding-right: 15px;
+            @include respond-to (media-sm) {
+                flex: 0 0 100%;
+                -ms-flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .epg_security_box {
+                width: 100%;
+                max-width: 620px;
+                @include respond-to (media-xl) {
+                    max-width: 520px;
+                }
+                @include respond-to (media-lg) {
+                    max-width: 420px;
+                }
+                @include respond-to (media-sm) {
+                    max-width: 100%;
+                }
+                h2 {
+                    font-size: 63px;
+                    color: #000000;
+                    line-height: normal;
+                    font-family: 'tt_normsextrabold';
+                    text-transform: uppercase;
+                    @include respond-to (media-xl) {
+                        font-size: 38px;
+                    }
+                    @include respond-to (media-md) {
+                        font-size: 30px;
+                    }
+                }
+                .epg_security_cont {
+                    font-size: 27px;
+                    line-height: 37px;
+                    font-family: 'tt_normsmedium';
+                    margin-top: 30px;
+                    margin-bottom: 100px;
+                    @include respond-to (media-xl) {
+                        font-size: 18px;
+                        line-height: 28px;
+                        margin-bottom: 60px;
+                    }
+                    @include respond-to (media-sm) {   
+                        margin-top: 15px;                     
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+            .epg_security_typelist {
+                position: relative;
+                ul {
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                    li {
+                        -ms-flex: 0 0 50%;
+                        flex: 0 0 50%;
+                        max-width: calc(50% - 25px);
+                        padding: 55px 40px;
+                        text-align: center;
+                        background: #ffffff; 
+                        border-radius: 10px;                                      
+                        margin-right: 40px;
+                        margin-bottom: 40px;
+                        position: relative;
+                        box-shadow: 0px 0px 20px 0px #ddddddb8;
+                        &:nth-child(2n) {
+                            margin-right: 0px !important;
+                        }
+                        @include respond-to (media-xl) {
+                            padding: 40px 35px;
+                        }
+                        @include respond-to (media-lg) {
+                            max-width: calc(50% - 20px);                            
+                            padding: 25px 15px;
+                            margin-right: 20px;
+                            margin-bottom: 20px;
+                        }
+                        @include respond-to (media-xs) {
+                            max-width: calc(50% - 5px);                            
+                            padding: 25px 5px;
+                            margin-right: 10px;
+                            margin-bottom: 10px;
+                        }
+                        .epgs_listbox {
+                            font-size: 23px;
+                            color: #102a6c;
+                            text-transform: uppercase;                            
+                            font-family: 'tt_normsextrabold';  
+                            @include respond-to (media-xl) {
+                                font-size: 15px;
+                            }
+                            @include respond-to (media-lg) {
+                                font-size: 15px;
+                            }
+                            @include respond-to (media-md) {
+                                font-size: 11px;
+                            }
+                            @include respond-to (media-sm) {
+                                font-size: 13px;
+                            }
+                            .epgs_listicon {
+                                margin-bottom: 35px;
+                                @include respond-to (media-xl) {
+                                    max-width: 75px;
+                                    margin: 0px auto 25px;
+                                }
+                                @include respond-to (media-lg) {
+                                    max-width: 75px;
+                                    margin: 0px auto 15px;
+                                }
+                            }
+                        }
+                    }
+                    .epgs_top_115 {
+                        top: 115px;
+                        @include respond-to (media-xl){
+                            top: 95px;
+                        }
+                        @include respond-to (media-lg){
+                            top: 60px;
+                        }
+                        @include respond-to (media-sm){
+                            top: 40px;
+                        }
+                    }
+                }  
+            }
+                      
+        }
+        
+    }
+    
+}

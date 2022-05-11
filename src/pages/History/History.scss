@@ -1,0 +1,17 @@
+@import '../../mixin.scss';
+
+.history_tableWrap {
+    table {
+        thead {
+            th {
+                font-size: 18px;
+                color: #000000;
+                font-weight: 600;
+                text-align: center;
+                padding: 15px 10px;
+                background: #e5e5e5;
+                border: 0px;
+            }
+        }
+    }
+}

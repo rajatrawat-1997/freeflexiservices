@@ -1,0 +1,102 @@
+@import '../../mixin.scss';
+
+.identityVerification_boxWrap.d-flex {
+    @include  respond-to (media-xs) {
+        display: block !important;
+    }
+}
+.identityVerification_box {
+    width: 100%;
+    max-width: 480px;
+    padding: 0px 25px;
+    transition: all 0.3s;
+    position: relative;  
+    @include respond-to (media-sm) {
+        padding: 0px 15px;
+    }
+    @include respond-to (media-xs) {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    &:hover {
+        .identityVerification_boxInner { 
+            box-shadow: -2px 2px 20px 10px #e0e0e0d6;
+        }
+    }
+    .identityVerification_boxInner {        
+        text-align: center;
+        padding: 50px;
+        border: 1px solid #e0e0e0; 
+        border-radius: 10px;
+        transition: all 0.3s;
+        position: relative;  
+        @include respond-to (media-lg) {
+            padding: 35px;
+        }
+        @include respond-to (media-sm) {
+            padding: 20px;
+        }
+    }
+}
+.verification_idHD {
+    font-size: 25px;
+    color: #000000;
+    padding: 30px 0px;
+    font-family: 'tt_normsbold';
+    @include respond-to (media-sm) {
+        font-size: 17px;
+        padding: 20px 0px;
+    }
+}
+
+.persona-widget__iframe{
+    
+    height:500px;
+    align:center
+}
+
+.kyc_dv_wrapper {
+    width: 100%;
+    max-width: 690px;
+    position: relative;
+    padding: 15px;
+    margin: 0px auto;
+    min-height: calc(100vh - 143px);
+
+    .kyc_info {
+        width: 100%;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 1px -5px 20px 10px #e9e9e9;
+
+        .persona-widget__iframe {
+            width: 100%
+        }
+    }
+}
+
+@media (max-width: 768.98px) {
+    
+        .hdlDnK {
+            position: fixed;
+            right: -130px;
+            bottom: 64px;
+            bottom: 0 !important;
+            right: 20px !important;
+        }
+    
+}
+@media (max-height: 419.98px) {
+    
+        .hdlDnK {
+            position: fixed;
+            right: -130px;
+            bottom: 64px;
+            bottom: 0 !important;
+            right: 20px !important;
+        }
+    
+}

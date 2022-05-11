@@ -1,0 +1,80 @@
+@import '../../mixin.scss';
+
+.topHD_bannerBox {
+    background: rgb(29,79,209);
+    background: linear-gradient(180deg, rgba(29,79,209,1) 0%, rgba(10,51,157,1) 100%);
+    padding: 35px 50px;
+    color: #ffffff;
+    border-radius: 4px;
+    @include respond-to (media-xl) {
+        padding: 30px;
+    }
+    @include respond-to (media-sm) {
+        padding: 15px;
+    }
+    .usted_logo {
+        @include respond-to (media-xl) {
+            max-width: 50px;
+        }
+        @include respond-to (media-sm) {
+            max-width: 35px;
+        }
+    }
+    .usted_logoTxt {
+        font-size: 44px;
+        padding: 0px 20px;
+        width: calc(100% - 80px);
+        @include respond-to (media-xl) {
+            font-size: 30px;
+            width: calc(100% - 70px);
+        }
+        @include respond-to (media-lg) {
+            font-size: 24px;
+            padding: 0px 10px;
+            width: calc(100% - 70px);
+        }  
+        @include respond-to (media-sm) {
+            font-size: 18px;
+            width: calc(100% - 55px);
+        }     
+    }
+    .eb_title {
+        font-size: 35px;
+        font-weight: 400;
+        line-height: normal;
+        @include respond-to (media-xl) {
+            font-size: 28px;
+        }
+        @include respond-to (media-md) {
+            font-size: 21px;
+        }
+        @include respond-to (media-sm) {
+            font-size: 16px;
+        }
+    }
+    .eb_value {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: normal;
+        @include respond-to (media-xl) {
+            font-size: 40px;
+        }
+        @include respond-to (media-md) {
+            font-size: 28px;
+        }
+        @include respond-to (media-sm) {
+            font-size: 21px;
+        }
+    }
+}
+.er_whiteBox {
+    padding: 50px 35px;
+    background: #ffffff;
+    border-radius: 4px;
+    @include respond-to (media-xl) {
+        padding: 30px;
+    }
+    @include respond-to (media-sm) {
+        padding: 15px;
+    }
+}
